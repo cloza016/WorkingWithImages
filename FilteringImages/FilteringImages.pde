@@ -1,18 +1,21 @@
 //declare variables
 PImage pusheen;
-float scaleFactor = 1;
+PImage kittens;
 
 void setup(){
-size(500,500);  //set size of screen
-
+size(800,600);  //set size of screen
 
 //initialize variables
 pusheen=loadImage("pusheen.jpg");
+kittens=loadImage("kittens2.jpg");
+
+pusheen.mask(kittens);  //mask the pusheen image
 }
 
 void draw(){
 
-image(pusheen,width/2,height/2,pusheen.width*scaleFactor,pusheen.height*scaleFactor);  //display image
-filter(THRESHOLD);
+background(map(mouseY,0,height,0,255));  //draw a background
+
+image(pusheen,mouseX,mouseY);  //display the image
 
 }
