@@ -18,7 +18,7 @@ pusheen4=loadImage("pusheengames.jpg");
 pusheen5=loadImage("pusheenpizza.jpg");
 bat=loadImage("batsignal.jpg");
 
-
+pusheen.mask(bat);  //mask the pusheen image
 
 }
 
